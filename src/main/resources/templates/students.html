@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Students</title>
+</head>
+<body>
+<h1>Students</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Profile Address</th>
+        <th>Courses</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="student : ${students}">
+<!--        <p th:text="${student.getId()}"> </p>-->
+        <td th:text="${student.getId()}"></td>
+        <td th:text="${student.getName()}"></td>
+        <td th:text="${student.profile.address}"></td>
+<!--        <td>-->
+<!--            <ul>-->
+<!--                <li th:each="course : ${student.getCourses()}" ></li>-->
+<!--            </ul>-->
+<!--        </td>-->
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
